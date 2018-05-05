@@ -1,0 +1,31 @@
+Boards :MB989/S  and MB989/P,,BOM rev: ,B02,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+"applied ""automatic filter"" row 7, in column ""variant"" select (custom), chose equal=""base"" OR equal=""serial"" to obtain MB989/S (SPI configuration)",,,,,,,,,,,,,,,,
+"applied ""automatic filter"" row 7, in column ""variant"" select (custom), chose equal=""base"" OR equal=""parallel"" to obtain MB989/P (16bit parallel configuration)",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+Part Number (ST or sub co),Quantity,"Description (fonction, value, ..)",Reference (topologic number),Version,Package,Manufacturer 1,Part#1,Manufacturer 2 second source,Part#2 Second source,Distributor,Order code,Fitted or not fitted,Supplied by (ST or Sub Co),ROHS Compliant,Comments,Variant
+,1,100nF,C6,,603,www.fenghua-advanced.com,0603B104K500NT,,,,,,Sub Co,lead free,,base
+,1,4.7uF/16V,C3,,TAN-A,AVX,TAJA475K016RNJ,,,,,,Sub Co,lead free,,base
+,1,PNP transistor,T1,,SOT-23,JCST,9012,,,,,,Sub Co,lead free,,base
+,1,MOSFET,T2,,SOT-23-6L,,FDC606P,,,,,,Sub Co,lead free,,base
+,1,FCP connector,CN3,,,OMRON,XF2B-5145-31A,,,,,,Sub Co,lead free,,base
+,1,0,R2,,603,www.fenghua-advanced.com,RS03K000JTL,,,,,,Sub Co,lead free,"1/16W,5%",serial
+,1,0,R1,,603,www.fenghua-advanced.com,RS03K000JTL,,,,,,Sub Co,lead free,"1/16W,5%",parallel
+,6,do not fit,"R2, R9, R10, R12, R13, R19",,603,www.fenghua-advanced.com,RS03K000JTL,,,,,do not fit,Sub Co,lead free,,parallel
+,4,75,"R14, R15,  R16,  R17",,603,www.fenghua-advanced.com,RS03K750JTL,,,,,,Sub Co,lead free,"1/16W,5%",serial
+,4,90,"R14, R15,  R16,  R17",,603,www.fenghua-advanced.com,RS03K750JTL,,,,,,Sub Co,lead free,"1/16W,5%",parallel
+,1,1K,R3,,603,www.fenghua-advanced.com,RS03K102JTL,,,,,,Sub Co,lead free,"1/16W,5%",base
+,4,4K7,"R5,R6,R18,R24",,603,www.fenghua-advanced.com,RS03K472JTL,,,,,,Sub Co,lead free,"1/16W,5%",base
+,7,4K7,"R7, R8, R11, R20, R21, R22, R23, ",,603,www.fenghua-advanced.com,RS03K472JTL,,,,,,Sub Co,lead free,"1/16W,5%",parallel
+,5,4K7,"R9, R10, R12, R13, R19",,603,www.fenghua-advanced.com,RS03K472JTL,,,,,,Sub Co,lead free,"1/16W,5%",serial
+,1,do not fit,R4,,603,,,,,,,do not fit,Sub Co,lead free,,base
+,8,do not fit,"R1, R7,R8, R11, R20, R21, R22, R23",,603,,,,,,,do not fit,Sub Co,lead free,,serial
+,1,10K,RP1,,RES-4B,www.fenghua-advanced.com,RCML08W103JT,,,,,,Sub Co,lead free,,base
+,4,10K,"RP2,RP3,RP4,RP5",,RES-4B,www.fenghua-advanced.com,RCML08W103JT,,,,,,Sub Co,lead free,,serial
+,4,do not fit,"RP2,RP3,RP4,RP5",,RES-4B,www.fenghua-advanced.com,RCML08W103JT,,,,,do not fit,Sub Co,lead free,,parallel
+,1,"2.8"" color LCD with touch panel",LCD1,,,,MRE028-8347G-51P-TP-A,,,,,,ST,lead free,,base
+,1,do not fit,CN1,,2.54mm pitch,"SHANGHAI HUGE ELECTERICAL UNITED DEVELOPMENT CO.,LTD (www.chinahuge.com)",2213S-8G,,,,,do not fit,Sub Co,lead free,,parallel
+,1,connector,CN1,,2.54mm pitch,"SHANGHAI HUGE ELECTERICAL UNITED DEVELOPMENT CO.,LTD (www.chinahuge.com)",2213S-8G,,,,,,Sub Co,lead free,,serial
+,1,17x2 header,CN2,,2*17P,,,,,,,,Sub Co,lead free,,parallel
+,1,do not fit,CN2,,2*17P,,,,,,,,Sub Co,lead free,,serial

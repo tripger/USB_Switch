@@ -1,0 +1,10 @@
+Board :MB979,,BOM rev: ,A01,,,,,,,,,,,,,
+Designer name,Qing shao,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+Part Number (ST or sub co),Quantity,"Description (fonction, value, ..)",Reference (topologic number),Version,Package,Manufacturer 1,Part#1,Manufacturer 2 second source,Part#2 Second source,Distributor,Order code,Fitted or not fitted,Supplied by (ST or Sub Co),ROHS Compliant,Comments,Variant
+,1,Header 1*24,CN1,,1*24,"SHANGHAI HUGE ELECTERICAL UNITED DEVELOPMENT CO.,LTD (www.chinahuge.com)",2212S-24SG-85,,,,,,Sub Co,lead free,,
+,1,Header 1*24,CN2,,1*24,"SHANGHAI HUGE ELECTERICAL UNITED DEVELOPMENT CO.,LTD (www.chinahuge.com)",2212S-24SG-85,,,,,,Sub Co,lead free,,
+,1,Header 2*24,CN3,,2*24,"SHANGHAI HUGE ELECTERICAL UNITED DEVELOPMENT CO.,LTD (www.chinahuge.com)",2214S-48SG-85,,,,,,Sub Co,lead free,,
+,1,Header 2*24,CN4,,2*24,"SHANGHAI HUGE ELECTERICAL UNITED DEVELOPMENT CO.,LTD (www.chinahuge.com)",2214S-48SG-85,,,,,,Sub Co,lead free,,
+,1,XHO5002B,U1,,,http://www.folio9.cn/,XHO5002B,,,,,,ST,lead free,,

@@ -1,0 +1,4 @@
+load STM32L476ZGTx 
+project name STCubeGenerated 
+project toolchain "Makefile" 
+project path "C:\soft_eng\STM32L476\USB_Switch\RTE\Device\STM32L476ZGTx\" 
