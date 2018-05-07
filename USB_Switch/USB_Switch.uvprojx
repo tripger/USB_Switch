@@ -10,6 +10,7 @@
       <TargetName>Eval_USB</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -334,7 +335,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>USE_IOEXPANDER USE_STM32L476G_EVAL_REVB</Define>
               <Undefine></Undefine>
               <IncludePath>..\bsp\L476G_EVAL;..\bsp\Common\Board;..\drivers\Common;..\drivers\stmpe811;..\drivers\stmpe1600</IncludePath>
             </VariousControls>

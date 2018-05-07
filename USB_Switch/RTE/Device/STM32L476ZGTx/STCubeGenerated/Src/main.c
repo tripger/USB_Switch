@@ -64,6 +64,26 @@ static void MX_ADC1_Init(void);
 
 /* USER CODE BEGIN 0 */
 
+/**
+  * Override default HAL_GetTick function
+  */
+uint32_t HAL_GetTick (void) {
+  static uint32_t ticks = 0U;
+         uint32_t i;
+
+  if (osKernelGetState () == osKernelRunning) {
+    return ((uint32_t)osKernelGetTickCount ());
+  }
+
+  /* If Kernel is not running wait approximately 1 ms then increment 
+     and return auxiliary tick counter value */
+  for (i = (SystemCoreClock >> 14U); i > 0U; i--) {
+    __NOP(); __NOP(); __NOP(); __NOP(); __NOP(); __NOP();
+    __NOP(); __NOP(); __NOP(); __NOP(); __NOP(); __NOP();
+  }
+  return ++ticks;
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -97,6 +117,17 @@ int main(void)
   MX_GPIO_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
+
+	SystemCoreClockUpdate();
+	
+	  /* Initialize CMSIS-RTOS2 */
+  osKernelInitialize ();
+
+  /* Create application main thread */
+  osThreadNew(app_main, NULL, &app_main_attr);
+
+  /* Start thread execution */
+  osKernelStart();
 
   /* USER CODE END 2 */
 

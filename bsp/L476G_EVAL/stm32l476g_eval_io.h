@@ -44,8 +44,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l476g_eval.h"
-#include "../Components/stmpe811/stmpe811.h"
-#include "../Components/stmpe1600/stmpe1600.h"
+#include "stmpe811.h"
+#include "stmpe1600.h"
 
 /** @addtogroup BSP
   * @{
