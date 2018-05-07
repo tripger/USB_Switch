@@ -256,17 +256,17 @@
                 <Size>0x0</Size>
               </XRAM>
               <OCR_RVCT1>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT1>
               <OCR_RVCT2>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT2>
               <OCR_RVCT3>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT3>
@@ -276,7 +276,7 @@
                 <Size>0x100000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
-                <Type>0</Type>
+                <Type>1</Type>
                 <StartAddress>0x0</StartAddress>
                 <Size>0x0</Size>
               </OCR_RVCT5>
@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>..\bsp\L476G_EVAL;..\bsp\Common\Board;..\drivers\Common;..\drivers\stmpe811;..\drivers\stmpe1600</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -379,9 +379,78 @@
       <Groups>
         <Group>
           <GroupName>Src</GroupName>
+          <Files>
+            <File>
+              <FileName>app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\app.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>stm32l476g_eval.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\L476G_EVAL\stm32l476g_eval.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l476g_eval_io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\L476G_EVAL\stm32l476g_eval_io.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc_stm32l476g_eval.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\L476G_EVAL\adc_stm32l476g_eval.c</FilePath>
+            </File>
+            <File>
+              <FileName>buttons_stm32l476g_eval.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\L476G_EVAL\buttons_stm32l476g_eval.c</FilePath>
+            </File>
+            <File>
+              <FileName>led_stm32l476g_eval.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\L476G_EVAL\led_stm32l476g_eval.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Drivers</GroupName>
+          <Files>
+            <File>
+              <FileName>stmpe811.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\drivers\stmpe811\stmpe811.c</FilePath>
+            </File>
+            <File>
+              <FileName>stmpe1600.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\drivers\stmpe1600\stmpe1600.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>:STM32CubeMX:Common Sources</GroupName>
+          <Files>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RTE\Device\STM32L476ZGTx\STCubeGenerated\Src\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_it.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\RTE\Device\STM32L476ZGTx\STCubeGenerated\Inc\stm32l4xx_it.h</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l4xx_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RTE\Device\STM32L476ZGTx\STCubeGenerated\Src\stm32l4xx_it.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
@@ -433,12 +502,6 @@
       </component>
       <component Cbundle="ARM Compiler" Cclass="Compiler" Cgroup="Event Recorder" Cvariant="DAP" Cvendor="Keil" Cversion="1.4.0" condition="Cortex-M Device">
         <package name="ARM_Compiler" schemaVersion="1.4.9" url="http://www.keil.com/pack/" vendor="Keil" version="1.4.0"/>
-        <targetInfos>
-          <targetInfo name="Eval_USB"/>
-        </targetInfos>
-      </component>
-      <component Capiversion="1.0.0" Cclass="Device" Cgroup="STM32Cube Framework" Csub="STM32CubeMX" Cvendor="Keil" Cversion="1.0.0" condition="STM32L4" generator="STM32CubeMX">
-        <package name="STM32L4xx_DFP" schemaVersion="1.2" url="http://www.keil.com/pack" vendor="Keil" version="2.0.0"/>
         <targetInfos>
           <targetInfo name="Eval_USB"/>
         </targetInfos>
