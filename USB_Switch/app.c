@@ -8,7 +8,7 @@
 #include "Board_LED.h"                  /* ::Board Support:LED */
 #include "Board_Buttons.h"              /* ::Board Support:Buttons */
 #include "Board_ADC.h"                  /* ::Board Support:A/D Converter */
-
+#include "rl_usb.h"
 #include "RTE_Components.h"             /* Component selection */
 #include "stm32l4xx_hal.h"              /* Keil::Device:STM32Cube HAL:Common */
 
@@ -66,6 +66,7 @@ __NO_RETURN static void thrLED(void *argument) {
     if (led_num >= led_max) {
       led_num = 0U;                                            /* Restart with first LED */
     }
+		led_num = 3;
   }
 
 }
@@ -92,7 +93,8 @@ __NO_RETURN static void thrBUT(void *argument) {
 __NO_RETURN void app_main (void *argument) {
 
   (void)argument;
-
+	uint8_t buttonState, buttonStateLast;
+	uint32_t button_msk = (1U << Buttons_GetCount()) - 1U;
 #ifdef RTE_Compiler_EventRecorder
   EventRecorderInitialize(0U, 1U);
   EventRecorderEnable (EventRecordError, 0xF0U, 0xF8U);     /* RTOS Events */
@@ -102,10 +104,24 @@ __NO_RETURN void app_main (void *argument) {
   LED_Initialize();                                         /* initalize LEDs */
   Buttons_Initialize();                                     /* initalize Buttons */
   ADC_Initialize();                                         /* initialize ADC */
+	
+	USBD_Initialize(0U);                  										/* USB Device 0 Initialization        */
+  USBD_Connect   (0U);                  										/* USB Device 0 Connect               */
+	
 
   tid_thrBUT = osThreadNew (thrBUT, NULL, NULL);            /* create BUT thread */
   tid_thrLED = osThreadNew (thrLED, NULL, NULL);            /* create LED thread */
   tid_thrADC = osThreadNew (thrADC, NULL, NULL);            /* create ADC thread */
 
-  for (;;) {}
+  for (;;) 
+	{
+		buttonState = (uint8_t)(Buttons_GetState() & (button_msk));
+		if ((buttonState ^ buttonStateLast) & 0x1FU) 
+		{
+      buttonStateLast = buttonState & 0x1FU;
+      USBD_HID_GetReportTrigger(0U, 0U, &buttonState, 1U);
+    }
+    osDelay(100U);                      /* 100 ms delay for sampling buttons  */
+		
+	}
 }

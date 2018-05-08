@@ -49,6 +49,9 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define USB_OTG_PWR_Pin GPIO_PIN_6
+#define USB_OTG_PWR_GPIO_Port GPIOC
+
 /* ########################## Assert Selection ############################## */
 /**
   * @brief Uncomment the line below to expanse the "assert_param" macro in the 

@@ -28,9 +28,15 @@
 #define RTE_DEVICE_HAL_DMA
 #define RTE_DEVICE_HAL_GPIO
 #define RTE_DEVICE_HAL_I2C
+#define RTE_DEVICE_HAL_PCD
 #define RTE_DEVICE_HAL_PWR
 #define RTE_DEVICE_HAL_RCC
 #define RTE_DEVICE_HAL_SRAM
 #define RTE_DEVICE_STARTUP_STM32L4XX    /* Device Startup for STM32L4 */
+#define RTE_Drivers_USBD0               /* Driver USBD0 */
+#define RTE_USB_Core                    /* USB Core */
+          #define RTE_USB_Core_Release            /* USB Core Release Version */
+#define RTE_USB_Device_0                /* USB Device 0 */
+#define RTE_USB_Device_HID_0            /* USB Device HID instance 0 */
 
 #endif /* RTE_COMPONENTS_H */
