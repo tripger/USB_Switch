@@ -188,11 +188,6 @@
         <SubType>1</SubType>
       </ScvdPack>
       <ScvdPack>
-        <Filename>C:\Keil_v5\ARM\PACK\Keil\ARM_Compiler\1.4.0\EventRecorder.scvd</Filename>
-        <Type>Keil.ARM_Compiler.1.4.0</Type>
-        <SubType>1</SubType>
-      </ScvdPack>
-      <ScvdPack>
         <Filename>C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.6.0\USB\USB.scvd</Filename>
         <Type>Keil.MDK-Middleware.7.6.0</Type>
         <SubType>1</SubType>
@@ -426,7 +421,7 @@
 
   <Group>
     <GroupName>::CMSIS</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>1</RteFlg>
@@ -441,16 +436,8 @@
   </Group>
 
   <Group>
-    <GroupName>::Compiler</GroupName>
-    <tvExp>1</tvExp>
-    <tvExpOptDlg>0</tvExpOptDlg>
-    <cbSel>0</cbSel>
-    <RteFlg>1</RteFlg>
-  </Group>
-
-  <Group>
     <GroupName>::Device</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>1</RteFlg>
